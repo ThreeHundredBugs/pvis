@@ -1,0 +1,9 @@
+*.exe
+a.out
+.vscode
+*test.txt
+
+# these images are too heavy to store in repo
+images/4096x4096.png
+images/8192x4096.png
+images/16384x16384.png
