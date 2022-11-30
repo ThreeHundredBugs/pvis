@@ -1,6 +1,7 @@
 from pycuda.compiler import SourceModule
 
-source = SourceModule("""
+
+_source = SourceModule("""
 __global__ void convolve3x3(float *dest, float *image, float kernel[9])
 {
     const int channel = threadIdx.x;
@@ -24,10 +25,19 @@ __global__ void convolve3x3(float *dest, float *image, float kernel[9])
     dest[destIndex] = sum;
 }
 
-__global__ void multiply_by(float *array, float val)
+__global__ void normalize(float *array, float invmax, float min)
 {
-}
+    const int channels = 4;
+    const int channel = threadIdx.x;
+    if (channel == 3) {
+        return;
+    }
 
+    const int index = blockIdx.x * channels + channel;
+    const float val = array[index];
+    array[index] = (val - min) * invmax;
+}
 """)
 
-convolve3x3 = source.get_function('convolve3x3')
+convolve3x3 = _source.get_function('convolve3x3')
+normalize = _source.get_function('normalize')

@@ -5,24 +5,24 @@ import pycuda.autoinit
 import numpy as np
 import pycuda.driver as cuda
 
-from .convolve import convolve3x3
+from .kernels import convolve3x3, normalize
 
 
 logger = logging.getLogger(__file__)
 
-EMBOSS_KERNEL = np.array([
+EMBOSS_FILTER = np.array([
     [-2, -1, 0],
     [-1,  1, 1],
     [ 0,  1, 2],
 ]).astype(np.float32)
 
-IDENTITY_KERNEL = np.array([
+IDENTITY_FILTER = np.array([
     [0, 0, 0],
     [0, 1, 0],
     [0, 0, 0],
 ]).astype(np.float32)
 
-BOX_BLUR_KERNEL = (1/3) * np.array([
+BOX_BLUR_FILTER = (1/3) * np.array([
     [1, 1, 1],
     [1, 1, 1],
     [1, 1, 1],
@@ -30,7 +30,7 @@ BOX_BLUR_KERNEL = (1/3) * np.array([
 
 
 def emboss(image: np.array) -> np.array:
-    return apply_filter(image, EMBOSS_KERNEL)
+    return apply_filter(image, EMBOSS_FILTER)
 
 def apply_filter(image: np.array, filter: np.array) -> np.array:
     width, height = image.shape[1], image.shape[0]
@@ -47,6 +47,19 @@ def apply_filter(image: np.array, filter: np.array) -> np.array:
         cuda.In(filter),
         block=(4, 1, 1),
         grid=(width, height, 1),
+    )
+    dest = dest.astype(np.float32)
+    minimum = np.min(np.amin(dest), 0)
+    maximum = np.amax(dest)
+
+    # todo mempool
+
+    normalize(
+        cuda.InOut(dest),
+        np.float32(1 / (maximum - minimum)),
+        np.float32(minimum),
+        block=(4, 1, 1),
+        grid=(width * height, 1, 1),
     )
 
     return dest
