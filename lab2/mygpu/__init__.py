@@ -1,4 +1,5 @@
 import logging
+import time
 import numpy as np
 
 import pycuda.autoinit
@@ -13,18 +14,24 @@ _CUDA_ATTRIBUTES = None
 _CUDA_DEVICE = None
 
 def print_info() -> None:
-    global _CUDA_ATTRIBUTES
-    global _CUDA_DEVICE
+    device, attributes = get_device_attributes()
+    print(device)
 
-    if _CUDA_ATTRIBUTES is None:
-        dev = pycuda.autoinit.device
-        _CUDA_DEVICE = dev.name()
-        _CUDA_ATTRIBUTES = dev.get_attributes()
-
-    print(_CUDA_DEVICE)
-
-    for name, value in _CUDA_ATTRIBUTES.items():
+    for name, value in attributes.items():
         print(f'  {repr(name).lstrip("pycuda._driver.device_attribute")}={value}')
+
+
+def get_device_attributes() -> (str, dict[str, str | int | float]):
+    global _CUDA_DEVICE, _CUDA_ATTRIBUTES
+
+    if _CUDA_DEVICE is not None and _CUDA_ATTRIBUTES is not None:
+        return _CUDA_DEVICE, _CUDA_ATTRIBUTES
+    
+    dev = pycuda.autoinit.device
+    _CUDA_DEVICE = dev.name()
+    _CUDA_ATTRIBUTES = dev.get_attributes()
+
+    return _CUDA_DEVICE, _CUDA_ATTRIBUTES
 
 
 def convert(in_image_path: str, out_image_path: str) -> None:
@@ -32,20 +39,24 @@ def convert(in_image_path: str, out_image_path: str) -> None:
     PIL.Image.MAX_IMAGE_PIXELS = 3000000000
 
     try:
-        logger.debug('Reading image')
+        before = time.time_ns()
         image = iio.imread(in_image_path)
+        after = time.time_ns()
+        elapsed = (after - before) / 1000
+        logger.info(f'Image reading took {elapsed}μs')
+
+        before = time.time_ns()
         image = image / 255
-        # image = np.array([
-        #     [[1,0,1,1], [0,1,1,1], [1,1,0,1], [1,0,0,1], [0,0,1,1],],
-        #     [[1,0,1,1], [0,1,1,1], [1,1,0,1], [1,0,0,1], [0,0,1,1],],
-        #     [[1,0,1,1], [0,1,1,1], [1,1,0,1], [1,0,0,1], [0,0,1,1],],
-        #     [[1,0,1,1], [0,1,1,1], [1,1,0,1], [1,0,0,1], [0,0,1,1],],
-        #     [[0,0,0,1], [0,0,0,1], [0,1,0,1], [0,1,1,1], [1,0,0,1],],
-        # ])
         filtered = emboss(image)
         filtered = np.rint(filtered * 255).astype(np.uint8)
+        after = time.time_ns()
+        elapsed = (after - before) / 1000
+        logger.info(f'Image conversion to float format took {elapsed}μs')
 
-        logger.debug('Saving image')
+        before = time.time_ns()
         iio.imwrite(out_image_path, filtered)
+        after = time.time_ns()
+        elapsed = (after - before) / 1000
+        logger.info(f'Image saving took {elapsed}μs')
     finally:
         PIL.Image.MAX_IMAGE_PIXELS = _prev

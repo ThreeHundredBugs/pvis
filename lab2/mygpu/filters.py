@@ -1,3 +1,4 @@
+import time
 import logging
 
 import pycuda.autoinit
@@ -41,6 +42,7 @@ def apply_filter(image: np.array, filter: np.array) -> np.array:
         mode='reflect',
     ).astype(np.float32)
 
+    before = time.time_ns()
     convolve3x3(
         cuda.Out(dest),
         cuda.In(image),
@@ -48,12 +50,15 @@ def apply_filter(image: np.array, filter: np.array) -> np.array:
         block=(4, 1, 1),
         grid=(width, height, 1),
     )
+    after = time.time_ns()
+    elapsed = (after - before) / 1000
+    logger.info(f'Image convolution took {elapsed}μs')
+
     dest = dest.astype(np.float32)
     minimum = np.min(np.amin(dest), 0)
     maximum = np.amax(dest)
 
-    # todo mempool
-
+    before = time.time_ns()
     normalize(
         cuda.InOut(dest),
         np.float32(1 / (maximum - minimum)),
@@ -61,5 +66,8 @@ def apply_filter(image: np.array, filter: np.array) -> np.array:
         block=(4, 1, 1),
         grid=(width * height, 1, 1),
     )
+    after = time.time_ns()
+    elapsed = (after - before) / 1000
+    logger.info(f'Image normalization took {elapsed}μs')
 
     return dest
