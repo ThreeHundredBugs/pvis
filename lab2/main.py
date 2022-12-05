@@ -32,11 +32,10 @@ def main() -> None:
 
     logging.basicConfig(
         level=args.log_level,
-        format='%(asctime)s.%(msecs)03d %(levelname)s: %(message)s',
+        format=f'%(asctime)s.%(msecs)03d %(levelname)s {args.input}: %(message)s',
         datefmt='%Y-%m-%d %H:%M:%S'
     )
 
-    print_info()
     convert(args.input, args.output)
 
 

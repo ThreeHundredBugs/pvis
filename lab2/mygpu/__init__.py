@@ -43,20 +43,21 @@ def convert(in_image_path: str, out_image_path: str) -> None:
         image = iio.imread(in_image_path)
         after = time.time_ns()
         elapsed = (after - before) / 1000
-        logger.info(f'Image reading took {elapsed}μs')
+        logger.info(f'Image reading: {elapsed}microseconds')
 
         before = time.time_ns()
         image = image / 255
-        filtered = emboss(image)
-        filtered = np.rint(filtered * 255).astype(np.uint8)
         after = time.time_ns()
         elapsed = (after - before) / 1000
-        logger.info(f'Image conversion to float format took {elapsed}μs')
+        logger.info(f'Image conversion to float format: {elapsed}microseconds')
+
+        filtered = emboss(image)
+        filtered = np.rint(filtered * 255).astype(np.uint8)
 
         before = time.time_ns()
         iio.imwrite(out_image_path, filtered)
         after = time.time_ns()
         elapsed = (after - before) / 1000
-        logger.info(f'Image saving took {elapsed}μs')
+        logger.info(f'Image saving: {elapsed}microseconds')
     finally:
         PIL.Image.MAX_IMAGE_PIXELS = _prev
