@@ -1,0 +1,320 @@
+1024x768.png: Image reading: 24137100ns
+1024x768.png: Image conversion to float format: 11417800ns
+1024x768.png: Allocation of memory for output image: 10003800ns
+1024x768.png: Allocation and memory copy for source image: 3001100ns
+1024x768.png: Image convolution: 8998800ns
+1024x768.png: Find min and max for normalization: 3000100ns
+1024x768.png: Image normalization: 0ns
+1024x768.png: Image saving: 325636600ns
+1024x768.png: Image reading: 31530100ns
+1024x768.png: Image conversion to float format: 7714000ns
+1024x768.png: Allocation of memory for output image: 9562800ns
+1024x768.png: Allocation and memory copy for source image: 2998300ns
+1024x768.png: Image convolution: 9000200ns
+1024x768.png: Find min and max for normalization: 2999700ns
+1024x768.png: Image normalization: 0ns
+1024x768.png: Image saving: 327550900ns
+1024x768.png: Image reading: 31247200ns
+1024x768.png: Image conversion to float format: 18832900ns
+1024x768.png: Allocation of memory for output image: 8998700ns
+1024x768.png: Allocation and memory copy for source image: 3000000ns
+1024x768.png: Image convolution: 9000300ns
+1024x768.png: Find min and max for normalization: 2999700ns
+1024x768.png: Image normalization: 0ns
+1024x768.png: Image saving: 328427800ns
+1024x768.png: Image reading: 22815900ns
+1024x768.png: Image conversion to float format: 21630400ns
+1024x768.png: Allocation of memory for output image: 9000000ns
+1024x768.png: Allocation and memory copy for source image: 2000300ns
+1024x768.png: Image convolution: 9999400ns
+1024x768.png: Find min and max for normalization: 3000600ns
+1024x768.png: Image normalization: 0ns
+1024x768.png: Image saving: 329262500ns
+1024x768.png: Image reading: 31522000ns
+1024x768.png: Image conversion to float format: 8362300ns
+1024x768.png: Allocation of memory for output image: 10666400ns
+1024x768.png: Allocation and memory copy for source image: 1999200ns
+1024x768.png: Image convolution: 10000000ns
+1024x768.png: Find min and max for normalization: 2999900ns
+1024x768.png: Image normalization: 0ns
+1024x768.png: Image saving: 325777500ns
+1024x768.png: Image reading: 33677700ns
+1024x768.png: Image conversion to float format: 7000300ns
+1024x768.png: Allocation of memory for output image: 8999600ns
+1024x768.png: Allocation and memory copy for source image: 2999100ns
+1024x768.png: Image convolution: 8999200ns
+1024x768.png: Find min and max for normalization: 2999900ns
+1024x768.png: Image normalization: 0ns
+1024x768.png: Image saving: 327780600ns
+1024x768.png: Image reading: 26562500ns
+1024x768.png: Image conversion to float format: 20400100ns
+1024x768.png: Allocation of memory for output image: 9003000ns
+1024x768.png: Allocation and memory copy for source image: 1998800ns
+1024x768.png: Image convolution: 10000400ns
+1024x768.png: Find min and max for normalization: 2999800ns
+1024x768.png: Image normalization: 0ns
+1024x768.png: Image saving: 328885200ns
+1024x768.png: Image reading: 15624300ns
+1024x768.png: Image conversion to float format: 20774300ns
+1024x768.png: Allocation of memory for output image: 8999900ns
+1024x768.png: Allocation and memory copy for source image: 3000100ns
+1024x768.png: Image convolution: 9000300ns
+1024x768.png: Find min and max for normalization: 2000000ns
+1024x768.png: Image normalization: 0ns
+1024x768.png: Image saving: 323818600ns
+1024x768.png: Image reading: 31258800ns
+1024x768.png: Image conversion to float format: 7315600ns
+1024x768.png: Allocation of memory for output image: 9000400ns
+1024x768.png: Allocation and memory copy for source image: 3000300ns
+1024x768.png: Image convolution: 10022100ns
+1024x768.png: Find min and max for normalization: 2008400ns
+1024x768.png: Image normalization: 0ns
+1024x768.png: Image saving: 321103400ns
+1024x768.png: Image reading: 31249400ns
+1024x768.png: Image conversion to float format: 7543900ns
+1024x768.png: Allocation of memory for output image: 4928900ns
+1024x768.png: Allocation and memory copy for source image: 0ns
+1024x768.png: Image convolution: 21819200ns
+1024x768.png: Find min and max for normalization: 1281600ns
+1024x768.png: Image normalization: 0ns
+1024x768.png: Image saving: 328113500ns
+1280x960.png: Image reading: 46874400ns
+1280x960.png: Image conversion to float format: 13828900ns
+1280x960.png: Allocation of memory for output image: 13999500ns
+1280x960.png: Allocation and memory copy for source image: 2999700ns
+1280x960.png: Image convolution: 13000000ns
+1280x960.png: Find min and max for normalization: 4000000ns
+1280x960.png: Image normalization: 0ns
+1280x960.png: Image saving: 556674900ns
+1280x960.png: Image reading: 31249800ns
+1280x960.png: Image conversion to float format: 17685900ns
+1280x960.png: Allocation of memory for output image: 13999400ns
+1280x960.png: Allocation and memory copy for source image: 3998500ns
+1280x960.png: Image convolution: 13999900ns
+1280x960.png: Find min and max for normalization: 5000500ns
+1280x960.png: Image normalization: 0ns
+1280x960.png: Image saving: 555500100ns
+1280x960.png: Image reading: 31249500ns
+1280x960.png: Image conversion to float format: 15887700ns
+1280x960.png: Allocation of memory for output image: 13998700ns
+1280x960.png: Allocation and memory copy for source image: 3998500ns
+1280x960.png: Image convolution: 13999700ns
+1280x960.png: Find min and max for normalization: 5000400ns
+1280x960.png: Image normalization: 0ns
+1280x960.png: Image saving: 556634500ns
+1280x960.png: Image reading: 37756600ns
+1280x960.png: Image conversion to float format: 10251300ns
+1280x960.png: Allocation of memory for output image: 14999100ns
+1280x960.png: Allocation and memory copy for source image: 3998400ns
+1280x960.png: Image convolution: 13999800ns
+1280x960.png: Find min and max for normalization: 3999500ns
+1280x960.png: Image normalization: 0ns
+1280x960.png: Image saving: 554319200ns
+1280x960.png: Image reading: 31249400ns
+1280x960.png: Image conversion to float format: 15366300ns
+1280x960.png: Allocation of memory for output image: 14000100ns
+1280x960.png: Allocation and memory copy for source image: 3999000ns
+1280x960.png: Image convolution: 13999600ns
+1280x960.png: Find min and max for normalization: 5000500ns
+1280x960.png: Image normalization: 0ns
+1280x960.png: Image saving: 553147400ns
+1280x960.png: Image reading: 37755900ns
+1280x960.png: Image conversion to float format: 12290700ns
+1280x960.png: Allocation of memory for output image: 13999200ns
+1280x960.png: Allocation and memory copy for source image: 2998500ns
+1280x960.png: Image convolution: 14000300ns
+1280x960.png: Find min and max for normalization: 4000400ns
+1280x960.png: Image normalization: 0ns
+1280x960.png: Image saving: 554304000ns
+1280x960.png: Image reading: 37754100ns
+1280x960.png: Image conversion to float format: 13289600ns
+1280x960.png: Allocation of memory for output image: 14999100ns
+1280x960.png: Allocation and memory copy for source image: 4000400ns
+1280x960.png: Image convolution: 13998800ns
+1280x960.png: Find min and max for normalization: 5000900ns
+1280x960.png: Image normalization: 0ns
+1280x960.png: Image saving: 555952300ns
+1280x960.png: Image reading: 32900100ns
+1280x960.png: Image conversion to float format: 12793400ns
+1280x960.png: Allocation of memory for output image: 14000500ns
+1280x960.png: Allocation and memory copy for source image: 3999600ns
+1280x960.png: Image convolution: 14000400ns
+1280x960.png: Find min and max for normalization: 2998700ns
+1280x960.png: Image normalization: 0ns
+1280x960.png: Image saving: 552072500ns
+1280x960.png: Image reading: 31250300ns
+1280x960.png: Image conversion to float format: 24672500ns
+1280x960.png: Allocation of memory for output image: 14000800ns
+1280x960.png: Allocation and memory copy for source image: 4000100ns
+1280x960.png: Image convolution: 13999100ns
+1280x960.png: Find min and max for normalization: 5000500ns
+1280x960.png: Image normalization: 0ns
+1280x960.png: Image saving: 552479700ns
+1280x960.png: Image reading: 41891700ns
+1280x960.png: Image conversion to float format: 2118900ns
+1280x960.png: Allocation of memory for output image: 22355300ns
+1280x960.png: Allocation and memory copy for source image: 3998700ns
+1280x960.png: Image convolution: 13999700ns
+1280x960.png: Find min and max for normalization: 4723600ns
+1280x960.png: Image normalization: 0ns
+1280x960.png: Image saving: 550533100ns
+2048x1536.png: Image reading: 69025100ns
+2048x1536.png: Image conversion to float format: 26909200ns
+2048x1536.png: Allocation of memory for output image: 36981000ns
+2048x1536.png: Allocation and memory copy for source image: 15625900ns
+2048x1536.png: Image convolution: 37157900ns
+2048x1536.png: Find min and max for normalization: 9452600ns
+2048x1536.png: Image normalization: 0ns
+2048x1536.png: Image saving: 833731200ns
+2048x1536.png: Image reading: 56397000ns
+2048x1536.png: Image conversion to float format: 36494700ns
+2048x1536.png: Allocation of memory for output image: 37834300ns
+2048x1536.png: Allocation and memory copy for source image: 15625900ns
+2048x1536.png: Image convolution: 39661200ns
+2048x1536.png: Find min and max for normalization: 9804200ns
+2048x1536.png: Image normalization: 0ns
+2048x1536.png: Image saving: 837793000ns
+2048x1536.png: Image reading: 69023200ns
+2048x1536.png: Image conversion to float format: 28190500ns
+2048x1536.png: Allocation of memory for output image: 37000000ns
+2048x1536.png: Allocation and memory copy for source image: 15626400ns
+2048x1536.png: Image convolution: 44223800ns
+2048x1536.png: Find min and max for normalization: 9797200ns
+2048x1536.png: Image normalization: 0ns
+2048x1536.png: Image saving: 829099700ns
+2048x1536.png: Image reading: 69017200ns
+2048x1536.png: Image conversion to float format: 33529000ns
+2048x1536.png: Allocation of memory for output image: 37341400ns
+2048x1536.png: Allocation and memory copy for source image: 15625500ns
+2048x1536.png: Image convolution: 39591600ns
+2048x1536.png: Find min and max for normalization: 9818400ns
+2048x1536.png: Image normalization: 0ns
+2048x1536.png: Image saving: 835032000ns
+2048x1536.png: Image reading: 72395400ns
+2048x1536.png: Image conversion to float format: 31226100ns
+2048x1536.png: Allocation of memory for output image: 37000000ns
+2048x1536.png: Allocation and memory copy for source image: 15626300ns
+2048x1536.png: Image convolution: 43950400ns
+2048x1536.png: Find min and max for normalization: 10000400ns
+2048x1536.png: Image normalization: 0ns
+2048x1536.png: Image saving: 843480200ns
+2048x1536.png: Image reading: 53402300ns
+2048x1536.png: Image conversion to float format: 39566100ns
+2048x1536.png: Allocation of memory for output image: 36999500ns
+2048x1536.png: Allocation and memory copy for source image: 15625500ns
+2048x1536.png: Image convolution: 42240700ns
+2048x1536.png: Find min and max for normalization: 9999800ns
+2048x1536.png: Image normalization: 0ns
+2048x1536.png: Image saving: 835445800ns
+2048x1536.png: Image reading: 65798300ns
+2048x1536.png: Image conversion to float format: 26000000ns
+2048x1536.png: Allocation of memory for output image: 36000900ns
+2048x1536.png: Allocation and memory copy for source image: 11000100ns
+2048x1536.png: Image convolution: 34069500ns
+2048x1536.png: Find min and max for normalization: 9731800ns
+2048x1536.png: Image normalization: 0ns
+2048x1536.png: Image saving: 829759000ns
+2048x1536.png: Image reading: 69006200ns
+2048x1536.png: Image conversion to float format: 28399400ns
+2048x1536.png: Allocation of memory for output image: 36998200ns
+2048x1536.png: Allocation and memory copy for source image: 15626400ns
+2048x1536.png: Image convolution: 37980400ns
+2048x1536.png: Find min and max for normalization: 10000600ns
+2048x1536.png: Image normalization: 0ns
+2048x1536.png: Image saving: 835057100ns
+2048x1536.png: Image reading: 69007100ns
+2048x1536.png: Image conversion to float format: 29521100ns
+2048x1536.png: Allocation of memory for output image: 36999800ns
+2048x1536.png: Allocation and memory copy for source image: 15626700ns
+2048x1536.png: Image convolution: 39606600ns
+2048x1536.png: Find min and max for normalization: 11736200ns
+2048x1536.png: Image normalization: 0ns
+2048x1536.png: Image saving: 835007900ns
+2048x1536.png: Image reading: 52882500ns
+2048x1536.png: Image conversion to float format: 38492900ns
+2048x1536.png: Allocation of memory for output image: 36999100ns
+2048x1536.png: Allocation and memory copy for source image: 15627000ns
+2048x1536.png: Image convolution: 42469200ns
+2048x1536.png: Find min and max for normalization: 9988400ns
+2048x1536.png: Image normalization: 0ns
+2048x1536.png: Image saving: 840892100ns
+8192x8192.png: Image reading: 967665000ns
+8192x8192.png: Image conversion to float format: 518731500ns
+8192x8192.png: Allocation of memory for output image: 735467700ns
+8192x8192.png: Allocation and memory copy for source image: 211717800ns
+8192x8192.png: Image convolution: 583066700ns
+8192x8192.png: Find min and max for normalization: 196037400ns
+8192x8192.png: Image normalization: 0ns
+8192x8192.png: Image saving: 18769191600ns
+8192x8192.png: Image reading: 939886300ns
+8192x8192.png: Image conversion to float format: 564569200ns
+8192x8192.png: Allocation of memory for output image: 663948000ns
+8192x8192.png: Allocation and memory copy for source image: 191550300ns
+8192x8192.png: Image convolution: 614115900ns
+8192x8192.png: Find min and max for normalization: 190807500ns
+8192x8192.png: Image normalization: 0ns
+8192x8192.png: Image saving: 18589853500ns
+8192x8192.png: Image reading: 939497900ns
+8192x8192.png: Image conversion to float format: 546804300ns
+8192x8192.png: Allocation of memory for output image: 684694700ns
+8192x8192.png: Allocation and memory copy for source image: 188218300ns
+8192x8192.png: Image convolution: 572262800ns
+8192x8192.png: Find min and max for normalization: 191851900ns
+8192x8192.png: Image normalization: 0ns
+8192x8192.png: Image saving: 19356027300ns
+8192x8192.png: Image reading: 958857300ns
+8192x8192.png: Image conversion to float format: 708814500ns
+8192x8192.png: Allocation of memory for output image: 723749300ns
+8192x8192.png: Allocation and memory copy for source image: 215003500ns
+8192x8192.png: Image convolution: 577998800ns
+8192x8192.png: Find min and max for normalization: 291339500ns
+8192x8192.png: Image normalization: 999900ns
+8192x8192.png: Image saving: 19494137700ns
+8192x8192.png: Image reading: 947638100ns
+8192x8192.png: Image conversion to float format: 569948500ns
+8192x8192.png: Allocation of memory for output image: 766531000ns
+8192x8192.png: Allocation and memory copy for source image: 217657500ns
+8192x8192.png: Image convolution: 574772900ns
+8192x8192.png: Find min and max for normalization: 205468500ns
+8192x8192.png: Image normalization: 0ns
+8192x8192.png: Image saving: 19330607400ns
+8192x8192.png: Image reading: 979339200ns
+8192x8192.png: Image conversion to float format: 552996500ns
+8192x8192.png: Allocation of memory for output image: 766439200ns
+8192x8192.png: Allocation and memory copy for source image: 188054200ns
+8192x8192.png: Image convolution: 579461400ns
+8192x8192.png: Find min and max for normalization: 211114100ns
+8192x8192.png: Image normalization: 0ns
+8192x8192.png: Image saving: 19083047200ns
+8192x8192.png: Image reading: 939219300ns
+8192x8192.png: Image conversion to float format: 563923500ns
+8192x8192.png: Allocation of memory for output image: 766987000ns
+8192x8192.png: Allocation and memory copy for source image: 187102600ns
+8192x8192.png: Image convolution: 579972200ns
+8192x8192.png: Find min and max for normalization: 192981700ns
+8192x8192.png: Image normalization: 0ns
+8192x8192.png: Image saving: 18673524400ns
+8192x8192.png: Image reading: 943026700ns
+8192x8192.png: Image conversion to float format: 546093500ns
+8192x8192.png: Allocation of memory for output image: 741031200ns
+8192x8192.png: Allocation and memory copy for source image: 197625200ns
+8192x8192.png: Image convolution: 572417300ns
+8192x8192.png: Find min and max for normalization: 197588700ns
+8192x8192.png: Image normalization: 0ns
+8192x8192.png: Image saving: 18658085800ns
+8192x8192.png: Image reading: 940356600ns
+8192x8192.png: Image conversion to float format: 561589400ns
+8192x8192.png: Allocation of memory for output image: 793181300ns
+8192x8192.png: Allocation and memory copy for source image: 202013900ns
+8192x8192.png: Image convolution: 573988700ns
+8192x8192.png: Find min and max for normalization: 191104700ns
+8192x8192.png: Image normalization: 0ns
+8192x8192.png: Image saving: 18635963200ns
+8192x8192.png: Image reading: 950591800ns
+8192x8192.png: Image conversion to float format: 531564200ns
+8192x8192.png: Allocation of memory for output image: 767272300ns
+8192x8192.png: Allocation and memory copy for source image: 187106100ns
+8192x8192.png: Image convolution: 570976300ns
+8192x8192.png: Find min and max for normalization: 199077700ns
+8192x8192.png: Image normalization: 0ns
+8192x8192.png: Image saving: 18666203800ns
