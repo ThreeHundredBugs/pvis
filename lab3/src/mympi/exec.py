@@ -43,7 +43,6 @@ def run_master(comm: MPI.Comm, dataset_path: str | PathLike, attempts: int) -> N
         requests.append(data_request)
 
     logger.info(f'Data sent. [{metadata}]')
-    logger.info(data)
     index = best_kmeans(data, attempts=attempts)
     logger.info(f'My PBM-index: {index}')
 
@@ -62,7 +61,6 @@ def run_worker(comm: MPI.Comm, attempts: int) -> None:
 
     data = np.empty(metadata.shape, dtype=metadata.dtype)
     comm.Recv(data, source=0, tag=Tags.KMEANS_DATA)
-    logger.info(data)
     logger.info(f'Data received. [{data.nbytes} bytes]')
 
     index = best_kmeans(data, attempts=attempts)

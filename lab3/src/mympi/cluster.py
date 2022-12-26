@@ -14,7 +14,7 @@ def prepare_data(csv_file: PathLike | str) -> np.ndarray:
     for column in df:
         df[column] *= 1 / df[column].max()
 
-    return df.to_numpy()
+    return df.to_numpy().astype(np.float64).copy()
 
 
 def best_kmeans(
