@@ -14,3 +14,5 @@ images/16384x16384.png
 **/__pycache__
 lab2/output/*
 !lab2/output/.gitkeep
+
+lab4/spark-3.3.0-bin-hadoop3
