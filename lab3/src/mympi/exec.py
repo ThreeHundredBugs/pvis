@@ -6,14 +6,16 @@ from mpi4py import MPI
 
 from .cluster import prepare_data, best_kmeans
 from .types import Tags, KmeansMetadata
+from time import time_ns
 
 logger = logging.getLogger(__file__)
 
 
 def find_best_clusters(dataset_path: str | PathLike) -> None:
+    time_before = time_ns()
     comm = MPI.COMM_WORLD
     rank = comm.Get_rank()
-    attempts_per_proc = 1
+    procs = comm.Get_size()
 
     logging.basicConfig(
         level=logging.INFO,
@@ -23,10 +25,20 @@ def find_best_clusters(dataset_path: str | PathLike) -> None:
     global logger
     logger = logging.getLogger(__file__)
 
+    attempts_total = 200
+    attempt_per_worker = int(np.ceil(attempts_total / procs))
+    attempt_per_master = attempts_total - (attempt_per_worker * (procs - 1))
+
     if rank == 0:
-        run_master(comm, dataset_path, attempts_per_proc)
+        logger.info(f'Total attempts: {attempts_total}')
+        logger.info(f'Running kmeans with {attempt_per_master} attempts')
+        run_master(comm, dataset_path, attempt_per_master)
     else:
-        run_worker(comm, attempts_per_proc)
+        logger.info(f'Running kmeans with {attempt_per_worker} attempts')
+        run_worker(comm, attempt_per_worker)
+
+    elapsed = time_ns() - time_before
+    logger.info(f'Total time: {elapsed / 1_000_000}ms')
 
 
 def run_master(comm: MPI.Comm, dataset_path: str | PathLike, attempts: int) -> None:
