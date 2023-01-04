@@ -1,12 +1,12 @@
 import logging
 from os import PathLike
+from time import time_ns
 
 import numpy as np
 from mpi4py import MPI
 
 from .cluster import prepare_data, best_kmeans
 from .types import Tags, KmeansMetadata
-from time import time_ns
 
 logger = logging.getLogger(__file__)
 
